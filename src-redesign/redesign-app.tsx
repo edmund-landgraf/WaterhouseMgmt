@@ -7,6 +7,8 @@ import { HomePage } from "./pages/home";
 import { ServicesPage } from "./pages/services";
 import { OwnerLogin } from "./portals/owner/owner-login";
 import { OwnerPortal } from "./portals/owner/owner-portal";
+import { ManagerLogin } from "./portals/manager/manager-login";
+import { ManagerPortal } from "./portals/manager/manager-portal";
 import { TenantLogin } from "./portals/tenant/tenant-login";
 import { TenantPortal } from "./portals/tenant/tenant-portal";
 
@@ -24,6 +26,8 @@ export function RedesignApp() {
         <Route path="/portals/tenant" element={<TenantPortal />} />
         <Route path="/portals/owner/login" element={<OwnerLogin />} />
         <Route path="/portals/owner" element={<OwnerPortal />} />
+        <Route path="/portals/manager/login" element={<ManagerLogin />} />
+        <Route path="/portals/manager" element={<ManagerPortal />} />
         <Route path="*" element={<Navigate to="/" replace />} />
       </Routes>
     </main>

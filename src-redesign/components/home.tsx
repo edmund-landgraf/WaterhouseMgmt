@@ -1,4 +1,4 @@
-import { ArrowRight, BriefcaseBusiness, KeyRound, ShieldCheck } from "lucide-react";
+import { ArrowRight, BriefcaseBusiness, KeyRound, Settings2, ShieldCheck } from "lucide-react";
 import { Link } from "react-router-dom";
 import { heroImage, services } from "../content";
 
@@ -46,7 +46,7 @@ export function Home() {
           <div>
             <p className="text-xs font-extrabold uppercase tracking-wide text-[#c4b61d]">Portal access</p>
             <h2 className="mt-2 text-3xl font-extrabold text-[#111132]">Find the right Waterhouse portal</h2>
-            <p className="mt-2 max-w-2xl text-sm leading-6 text-slate-600">Tenants can manage rent and maintenance. Owners can review portfolio reporting, documents, and project updates.</p>
+            <p className="mt-2 max-w-2xl text-sm leading-6 text-slate-600">Tenants can manage rent and maintenance. Owners can review reporting. Managers can run the operational workflows behind both portals.</p>
           </div>
           <div className="portal-entry-actions">
             <Link className="portal-entry-card tenant" to="/portals/tenant/login">
@@ -61,6 +61,13 @@ export function Home() {
               <span>
                 <strong>For Owners</strong>
                 <em>Reports, projects, documents</em>
+              </span>
+            </Link>
+            <Link className="portal-entry-card manager" to="/portals/manager/login">
+              <Settings2 className="h-5 w-5" />
+              <span>
+                <strong>For Managers</strong>
+                <em>Leasing, accounting, maintenance</em>
               </span>
             </Link>
           </div>
