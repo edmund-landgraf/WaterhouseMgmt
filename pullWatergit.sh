@@ -8,8 +8,8 @@ MAIN_APP_NAME="waterhouse-main"
 REDESIGN_APP_NAME="waterhouse-redesign"
 
 API_PORT="4173"
-MAIN_PORT="6000"
-REDESIGN_PORT="6001"
+MAIN_PORT="6001"
+REDESIGN_PORT="6002"
 
 SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 
