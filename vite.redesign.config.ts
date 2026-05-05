@@ -41,6 +41,7 @@ export default defineConfig({
   },
   server: {
     port: 6002,
+    allowedHosts: ["unwhelm.online", "www.unwhelm.online", ".unwhelm.online"],
     strictPort: true,
   },
 });

@@ -11,8 +11,6 @@ export default defineConfig({
   },
   server: {
     port: 6001,
-    proxy: {
-      "/api": "http://127.0.0.1:4173",
-    },
+    allowedHosts: ["unwhelm.online", "www.unwhelm.online", ".unwhelm.online"],
   },
 });

@@ -3,7 +3,7 @@ import express from "express";
 import { waterhouseModel } from "./data/waterhouse.js";
 
 const app = express();
-const port = Number(process.env.PORT ?? 4173);
+const port = Number(process.env.PORT ?? 3000);
 
 app.use(cors());
 app.use(express.json());
