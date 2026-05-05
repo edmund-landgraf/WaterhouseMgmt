@@ -4,9 +4,9 @@
   "version": "0.1.0",
   "type": "module",
   "scripts": {
-    "dev": "concurrently \"npm:dev:server\" \"npm:dev:client\"",
-    "dev:client": "vite --host 127.0.0.1",
-    "dev:redesign": "vite --config vite.redesign.config.ts --host 127.0.0.1",
+    "dev": "concurrently \"npm:dev:server\" \"npm:dev:client\" \"npm:dev:redesign\"",
+    "dev:client": "vite --host 127.0.0.1 --port 6001",
+    "dev:redesign": "vite --config vite.redesign.config.ts --host 127.0.0.1 --port 6002",
     "dev:server": "nodemon server/index.js",
     "build": "tsc -b && vite build",
     "build:redesign": "tsc -b && vite build --config vite.redesign.config.ts",
