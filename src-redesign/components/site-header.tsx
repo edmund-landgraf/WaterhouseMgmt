@@ -32,6 +32,9 @@ export function SiteHeader() {
           <Link className="portal-nav-button manager" to="/portals/manager/login">
             For Managers
           </Link>
+          <Link className="portal-nav-button admin" to="/internal/login">
+            Admin
+          </Link>
         </div>
 
         <button className="grid h-11 w-11 place-items-center rounded-md border border-black/10 bg-white lg:hidden" type="button" aria-label="Open navigation" onClick={() => setMenuOpen(!menuOpen)}>
@@ -55,6 +58,9 @@ export function SiteHeader() {
             </Link>
             <Link className="rounded-md bg-[#e8eef8] px-3 py-3 text-sm font-bold text-[#111132]" to="/portals/manager/login" onClick={() => setMenuOpen(false)}>
               For Managers
+            </Link>
+            <Link className="rounded-md bg-[#111132] px-3 py-3 text-sm font-bold text-white" to="/internal/login" onClick={() => setMenuOpen(false)}>
+              Admin
             </Link>
           </nav>
         </div>

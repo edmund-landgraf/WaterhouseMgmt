@@ -1,5 +1,6 @@
-import { Navigate, Route, Routes } from "react-router-dom";
+import { Navigate, Route, Routes, useLocation } from "react-router-dom";
 import { SiteHeader } from "./components/site-header";
+import { InternalDashboard, InternalLogin } from "./internal/internal-dashboard";
 import { CommunitiesPage } from "./pages/communities";
 import { ContactPage } from "./pages/contact";
 import { HistoryPage } from "./pages/history";
@@ -13,9 +14,12 @@ import { TenantLogin } from "./portals/tenant/tenant-login";
 import { TenantPortal } from "./portals/tenant/tenant-portal";
 
 export function RedesignApp() {
+  const location = useLocation();
+  const isInternalRoute = location.pathname.startsWith("/internal");
+
   return (
     <main className="site-shell min-h-screen text-[#111132]">
-      <SiteHeader />
+      {!isInternalRoute && <SiteHeader />}
       <Routes>
         <Route path="/" element={<HomePage />} />
         <Route path="/services" element={<ServicesPage />} />
@@ -28,6 +32,8 @@ export function RedesignApp() {
         <Route path="/portals/owner" element={<OwnerPortal />} />
         <Route path="/portals/manager/login" element={<ManagerLogin />} />
         <Route path="/portals/manager" element={<ManagerPortal />} />
+        <Route path="/internal/login" element={<InternalLogin />} />
+        <Route path="/internal" element={<InternalDashboard />} />
         <Route path="*" element={<Navigate to="/" replace />} />
       </Routes>
     </main>

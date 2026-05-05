@@ -70,6 +70,13 @@ export function Home() {
                 <em>Leasing, accounting, maintenance</em>
               </span>
             </Link>
+            <Link className="portal-entry-card admin" to="/internal/login">
+              <ShieldCheck className="h-5 w-5" />
+              <span>
+                <strong>Admin</strong>
+                <em>Internal docs</em>
+              </span>
+            </Link>
           </div>
         </div>
 
